@@ -1,0 +1,11 @@
+class CreateReserves < ActiveRecord::Migration
+  def change
+    create_table :reserves do |t|
+      t.reference :movie
+      t.reference :client
+      t.string :obs
+
+      t.timestamps
+    end
+  end
+end

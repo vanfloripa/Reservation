@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  movie: 
+  client: 
+  obs: MyString
+
+two:
+  movie: 
+  client: 
+  obs: MyString

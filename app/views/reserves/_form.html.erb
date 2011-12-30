@@ -1,0 +1,29 @@
+<%= form_for(@reserve) do |f| %>
+  <% if @reserve.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reserve.errors.count, "error") %> prohibited this reserve from being saved:</h2>
+
+      <ul>
+      <% @reserve.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :movie %><br />
+    <%= f.select :movie_id, Movie.all.map { |movie| [movie.name, movie.id] } %>
+  </div>
+  <div class="field">
+    <%= f.label :client %><br />
+    <%= f.select :client_id, Client.all.map { |client| [client.name, client.id] } %>
+  </div>
+  <div class="field">
+    <%= f.label :obs %><br />
+    <%= f.text_field :obs %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

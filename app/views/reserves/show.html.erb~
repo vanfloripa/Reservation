@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Movie:</b>
+  <%= @reserve.movie %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%= @reserve.client %>
+</p>
+
+<p>
+  <b>Obs:</b>
+  <%= @reserve.obs %>
+</p>
+
+
+<%= link_to 'Edit', edit_reserve_path(@reserve) %> |
+<%= link_to 'Back', reserves_path %>
